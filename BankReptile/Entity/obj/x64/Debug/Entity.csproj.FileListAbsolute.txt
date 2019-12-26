@@ -1,0 +1,12 @@
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\Entity\bin\x64\Debug\Entity.dll
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\Entity\bin\x64\Debug\Entity.pdb
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\Entity\bin\x64\Debug\Common.dll
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\Entity\bin\x64\Debug\System.Net.Http.dll
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\Entity\bin\x64\Debug\Newtonsoft.Json.dll
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\Entity\bin\x64\Debug\RestSharp.dll
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\Entity\bin\x64\Debug\Common.pdb
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\Entity\obj\x64\Debug\Entity.csprojAssemblyReference.cache
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\Entity\obj\x64\Debug\Entity.csproj.CoreCompileInputs.cache
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\Entity\obj\x64\Debug\Entity.csproj.CopyComplete
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\Entity\obj\x64\Debug\Entity.dll
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\Entity\obj\x64\Debug\Entity.pdb

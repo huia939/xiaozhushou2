@@ -1,0 +1,658 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Communication</name>
+    </assembly>
+    <members>
+        <member name="T:Communication.Coder">
+            <summary>
+            Edtor:Mr.Zhou
+            Last updated date:2009-07-24
+            通讯编码格式提供者,为通讯服务提供编码和解码服务 
+            可以在继承类中定制自己的编码方式如:数据加密传输等 
+            </summary>
+        </member>
+        <member name="F:Communication.Coder._encodingMothord">
+            <summary> 
+            编码方式 
+            </summary> 
+        </member>
+        <member name="M:Communication.Coder.#ctor">
+            <summary>
+            受保护的默认构造函数,提供给继承类使用 
+            </summary>
+        </member>
+        <member name="M:Communication.Coder.#ctor(Communication.Coder.EncodingMothord)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="encodingMothord">编码方式</param>
+        </member>
+        <member name="T:Communication.Coder.EncodingMothord">
+            <summary>
+            编码方式
+            </summary>
+        </member>
+        <member name="F:Communication.Coder.EncodingMothord.Default">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Communication.Coder.EncodingMothord.UTF8">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Communication.Coder.EncodingMothord.Unicode">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Communication.Coder.EncodingMothord.ASCII">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Communication.Coder.GetEncodingString(System.Byte[],System.Int32)">
+            <summary> 
+            通讯数据解码 
+            </summary> 
+            <param name="dataBytes">需要解码的数据</param> 
+            <returns>编码后的数据</returns> 
+            <param name="size">大小</param>
+        </member>
+        <member name="M:Communication.Coder.GetEncodingBytes(System.String)">
+            <summary> 
+            数据编码 
+            </summary> 
+            <param name="datagram">需要编码的报文</param> 
+            <returns>编码后的数据</returns> 
+        </member>
+        <member name="T:Communication.DatagramResolver">
+            <summary>
+            Edtor:Mr.Zhou
+            Last updated date:2009-07-24
+            数据报文分析器,通过分析接收到的原始数据,得到完整的数据报文. 
+            继承该类可以实现自己的报文解析方法. 
+            通常的报文识别方法包括:固定长度,长度标记,标记符等方法 
+            本类的现实的是标记符的方法,你可以在继承类中实现其他的方法 
+            </summary>
+        </member>
+        <member name="F:Communication.DatagramResolver.endTag">
+            <summary> 
+            报文结束标记 
+            </summary> 
+        </member>
+        <member name="P:Communication.DatagramResolver.EndTag">
+            <summary> 
+            返回结束标记 
+            </summary> 
+        </member>
+        <member name="M:Communication.DatagramResolver.#ctor">
+            <summary> 
+            受保护的默认构造函数,提供给继承类使用 
+            </summary> 
+        </member>
+        <member name="M:Communication.DatagramResolver.#ctor(System.String)">
+            <summary> 
+            构造函数 
+            </summary> 
+            <param name="endTag">报文结束标记</param> 
+        </member>
+        <member name="M:Communication.DatagramResolver.Resolve(System.String@)">
+            <summary> 
+            解析报文 
+            </summary> 
+            <param name="rawDatagram">原始数据,返回未使用的报文片断, 
+            该片断会保存在Session的Datagram对象中</param> 
+            <returns>报文数组,原始数据可能包含多个报文</returns> 
+        </member>
+        <member name="T:Communication.NetEventArgs">
+            <summary>
+            Edtor:Mr.Zhou
+            Last updated date:2009-07-12
+            服务器程序的事件参数,包含了激发该事件的会话对象 
+            </summary> 
+        </member>
+        <member name="F:Communication.NetEventArgs._client">
+            <summary> 
+            客户端与服务器之间的会话 
+            </summary> 
+        </member>
+        <member name="M:Communication.NetEventArgs.#ctor(Communication.Session)">
+            <summary> 
+            构造函数 
+            </summary> 
+            <param name="client">客户端会话</param> 
+        </member>
+        <member name="P:Communication.NetEventArgs.Client">
+            <summary> 
+            获得激发该事件的会话对象 
+            </summary> 
+        </member>
+        <member name="T:Communication.Session">
+            <summary>
+            Edtor:Mr.Zhou
+            Last updated date:2009-07-12
+            客户端与服务器之间的会话类 
+            会话类包含远程通讯端的状态,这些状态包括Socket,报文内容, 
+            客户端退出的类型(正常关闭,强制退出两种类型) 
+            </summary> 
+        </member>
+        <member name="F:Communication.Session._id">
+            <summary> 
+            会话ID 
+            </summary> 
+        </member>
+        <member name="F:Communication.Session._datagram">
+            <summary> 
+            客户端发送到服务器的报文 
+            注意:在有些情况下报文可能只是报文的片断而不完整 
+            </summary> 
+        </member>
+        <member name="F:Communication.Session._cliSock">
+            <summary> 
+            客户端的Socket 
+            </summary> 
+        </member>
+        <member name="F:Communication.Session._exitType">
+            <summary> 
+            客户端的退出类型 
+            </summary> 
+        </member>
+        <member name="T:Communication.Session.ExitType">
+            <summary> 
+            退出类型枚举 
+            </summary> 
+        </member>
+        <member name="F:Communication.Session.ExitType.NormalExit">
+            <summary>
+             NormalExit
+            </summary>
+        </member>
+        <member name="F:Communication.Session.ExitType.ExceptionExit">
+            <summary>
+             ExceptionExit
+            </summary>
+        </member>
+        <member name="P:Communication.Session.ID">
+            <summary> 
+            返回会话的ID 
+            </summary> 
+        </member>
+        <member name="P:Communication.Session.Datagram">
+            <summary> 
+            存取会话的报文 
+            </summary> 
+        </member>
+        <member name="P:Communication.Session.ClientSocket">
+            <summary> 
+            获得与客户端会话关联的Socket对象 
+            </summary> 
+        </member>
+        <member name="P:Communication.Session.TypeOfExit">
+            <summary> 
+            存取客户端的退出方式 
+            </summary> 
+        </member>
+        <member name="M:Communication.Session.GetHashCode">
+            <summary> 
+            使用Socket对象的Handle值作为HashCode,它具有良好的线性特征. 
+            </summary> 
+            <returns></returns> 
+        </member>
+        <member name="M:Communication.Session.Equals(System.Object)">
+            <summary> 
+            返回两个Session是否代表同一个客户端 
+            </summary> 
+            <param name="obj"></param> 
+            <returns></returns> 
+        </member>
+        <member name="M:Communication.Session.ToString">
+            <summary> 
+            重载ToString()方法,返回Session对象的特征 
+            </summary> 
+            <returns></returns> 
+        </member>
+        <member name="M:Communication.Session.#ctor(System.Net.Sockets.Socket)">
+            <summary> 
+            构造函数 
+            </summary> 
+            <param name="cliSock">会话使用的Socket连接</param> 
+        </member>
+        <member name="M:Communication.Session.Close">
+            <summary> 
+            关闭会话 
+            </summary> 
+        </member>
+        <member name="T:Communication.SessionId">
+            <summary>
+            Edtor:Mr.Zhou
+            Last updated date:2009-07-12
+            唯一的标志一个Session,辅助Session对象在Hash表中完成特定功能 
+            </summary> 
+        </member>
+        <member name="F:Communication.SessionId._id">
+            <summary> 
+            与Session对象的Socket对象的Handle值相同,必须用这个值来初始化它 
+            </summary> 
+        </member>
+        <member name="P:Communication.SessionId.ID">
+            <summary> 
+            返回ID值 
+            </summary> 
+        </member>
+        <member name="M:Communication.SessionId.#ctor(System.Int32)">
+            <summary> 
+            构造函数 
+            </summary> 
+            <param name="id">Socket的Handle值</param> 
+        </member>
+        <member name="M:Communication.SessionId.Equals(System.Object)">
+            <summary> 
+            重载.为了符合Hashtable键值特征 
+            </summary> 
+            <param name="obj"></param> 
+            <returns></returns> 
+        </member>
+        <member name="M:Communication.SessionId.GetHashCode">
+            <summary> 
+            重载.为了符合Hashtable键值特征 
+            </summary> 
+            <returns></returns> 
+        </member>
+        <member name="M:Communication.SessionId.ToString">
+            <summary> 
+            重载,为了方便显示输出 
+            </summary> 
+            <returns></returns> 
+        </member>
+        <member name="T:Communication.TcpCli">
+             <summary>
+             Edtor:Mr.Zhou
+             Last updated date:2009-07-12
+             客戶端
+            </summary>
+        </member>
+        <member name="F:Communication.TcpCli._session">
+            <summary> 
+            客户端与服务器之间的会话类 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpCli._isConnected">
+            <summary> 
+            客户端是否已经连接服务器 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpCli.DefaultBufferSize">
+            <summary> 
+            接收数据缓冲区大小64K 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpCli._resolver">
+            <summary> 
+            报文解析器 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpCli._coder">
+            <summary> 
+            通讯格式编码解码器 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpCli._recvDataBuffer">
+            <summary> 
+            接收数据缓冲区 
+            </summary> 
+        </member>
+        <member name="E:Communication.TcpCli.ConnectedServer">
+            <summary> 
+            已经连接服务器事件 
+            </summary> 
+        </member>
+        <member name="E:Communication.TcpCli.ReceivedDatagram">
+            <summary> 
+            接收到数据报文事件 
+            </summary> 
+        </member>
+        <member name="E:Communication.TcpCli.DisConnectedServer">
+            <summary> 
+            连接断开事件 
+            </summary> 
+        </member>
+        <member name="E:Communication.TcpCli.ConnectedError">
+            <summary> 
+            连接异常事件 
+            </summary> 
+        </member>
+        <member name="E:Communication.TcpCli.ReceivedDatagramError">
+            <summary> 
+            接收数据异常 
+            </summary> 
+        </member>
+        <member name="P:Communication.TcpCli.ClientSession">
+            <summary> 
+            返回客户端与服务器之间的会话对象 
+            </summary> 
+        </member>
+        <member name="P:Communication.TcpCli.IsConnected">
+            <summary> 
+            返回客户端与服务器之间的连接状态 
+            </summary> 
+        </member>
+        <member name="P:Communication.TcpCli.Resovlver">
+            <summary> 
+            数据报文分析器 
+            </summary> 
+        </member>
+        <member name="P:Communication.TcpCli.ServerCoder">
+            <summary> 
+            编码解码器 
+            </summary> 
+        </member>
+        <member name="M:Communication.TcpCli.#ctor">
+            <summary> 
+            默认构造函数,使用默认的编码格式 
+            </summary> 
+        </member>
+        <member name="M:Communication.TcpCli.#ctor(Communication.Coder)">
+            <summary> 
+            构造函数,使用一个特定的编码器来初始化 
+            </summary> 
+            <param name="coder">报文编码器</param> 
+        </member>
+        <member name="M:Communication.TcpCli.Connect(System.String,System.Int32)">
+            <summary> 
+            连接服务器 
+            </summary> 
+            <param name="ip">服务器IP地址</param> 
+            <param name="port">服务器端口</param> 
+        </member>
+        <member name="M:Communication.TcpCli.Connect(System.String,System.Int32,System.Net.EndPoint)">
+            <summary> 
+            连接服务器 
+            </summary> 
+            <param name="ip">服务器IP地址</param> 
+            <param name="port">服务器端口</param> 
+            <param name="point">網路地址</param>
+        </member>
+        <member name="M:Communication.TcpCli.Send(System.String)">
+            <summary> 
+            发送数据报文 
+            </summary> 
+            <param name="datagram"></param> 
+        </member>
+        <member name="M:Communication.TcpCli.Close">
+            <summary> 
+            关闭连接 
+            </summary> 
+        </member>
+        <member name="M:Communication.TcpCli.SendDataEnd(System.IAsyncResult)">
+            <summary> 
+            数据发送完成处理函数 
+            </summary> 
+            <param name="iar"></param> 
+        </member>
+        <member name="M:Communication.TcpCli.Connected(System.IAsyncResult)">
+            <summary> 
+            建立Tcp连接后处理过程 
+            </summary> 
+            <param name="iar">异步Socket</param> 
+        </member>
+        <member name="M:Communication.TcpCli.RecvData(System.IAsyncResult)">
+            <summary> 
+            数据接收处理函数 
+            </summary> 
+            <param name="iar">异步Socket</param> 
+        </member>
+        <member name="T:Communication.NetEvent">
+            <summary>
+            Edtor:Mr.Zhou
+            Last updated date:2009-07-12
+            网络通讯事件模型委托 
+            </summary> 
+        </member>
+        <member name="T:Communication.TcpSvr">
+            <summary>
+             服務器
+            </summary>
+        </member>
+        <member name="F:Communication.TcpSvr.DefaultMaxClient">
+            <summary> 
+            默认的服务器最大连接客户端端数据 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpSvr.DefaultBufferSize">
+            <summary> 
+            接收数据缓冲区大小64K 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpSvr.MaxDatagramSize">
+            <summary> 
+            最大数据报文大小 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpSvr._resolver">
+            <summary> 
+            报文解析器 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpSvr._coder">
+            <summary> 
+            通讯格式编码解码器 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpSvr._port">
+            <summary> 
+            服务器程序使用的端口 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpSvr._maxClient">
+            <summary> 
+            服务器程序允许的最大客户端连接数 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpSvr._isRun">
+            <summary> 
+            服务器的运行状态 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpSvr._recvDataBuffer">
+            <summary> 
+            接收数据缓冲区 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpSvr._svrSock">
+            <summary> 
+            服务器使用的异步Socket类, 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpSvr._sessionTable">
+            <summary> 
+            保存所有客户端会话的哈希表 
+            </summary> 
+        </member>
+        <member name="F:Communication.TcpSvr.lastSendData">
+            <summary>
+            最后一次发送数据内容
+            </summary>
+        </member>
+        <member name="E:Communication.TcpSvr.ClientConn">
+            <summary> 
+            客户端建立连接事件 
+            </summary> 
+        </member>
+        <member name="E:Communication.TcpSvr.ConnectedError">
+            <summary> 
+            连接异常事件 
+            </summary> 
+        </member>
+        <member name="E:Communication.TcpSvr.ClientClose">
+            <summary> 
+            客户端关闭事件 
+            </summary> 
+        </member>
+        <member name="E:Communication.TcpSvr.ServerFull">
+            <summary> 
+            服务器已经满事件 
+            </summary> 
+        </member>
+        <member name="E:Communication.TcpSvr.RecvData">
+            <summary> 
+            服务器接收到数据事件 
+            </summary> 
+        </member>
+        <member name="M:Communication.TcpSvr.#ctor(System.UInt16,System.UInt16,Communication.Coder)">
+            <summary> 
+            构造函数 
+            </summary> 
+            <param name="port">服务器端监听的端口号</param> 
+            <param name="maxClient">服务器能容纳客户端的最大能力</param> 
+            <param name="coder">通讯的编码方式</param> 
+        </member>
+        <member name="M:Communication.TcpSvr.#ctor">
+            <summary> 
+            构造函数 
+            </summary> 
+        </member>
+        <member name="M:Communication.TcpSvr.#ctor(System.Int32,Communication.Coder)">
+            <summary> 
+            构造函数 
+            </summary> 
+            <param name="port">服务器端监听的端口号</param> 
+            <param name="coder">通讯的编码方式</param> 
+        </member>
+        <member name="M:Communication.TcpSvr.#ctor(System.UInt16,Communication.Coder)">
+            <summary> 
+            构造函数 
+            </summary> 
+            <param name="maxClient">服务器能容纳客户端的最大能力</param> 
+            <param name="coder">通讯的编码方式</param> 
+        </member>
+        <member name="M:Communication.TcpSvr.#ctor(Communication.Coder)">
+            <summary> 
+            构造函数 
+            </summary> 
+            <param name="coder">通讯的编码方式</param> 
+        </member>
+        <member name="M:Communication.TcpSvr.#ctor(System.UInt16,System.Int32)">
+            <summary> 
+            构造函数(默认使用Default编码方式) 
+            </summary> 
+            <param name="port">服务器端监听的端口号</param> 
+            <param name="maxClient">服务器能容纳客户端的最大能力</param> 
+        </member>
+        <member name="M:Communication.TcpSvr.#ctor(System.UInt16)">
+            <summary> 
+            构造函数(默认使用Default编码方式和DefaultMaxClient(100)个客户端的容量) 
+            </summary> 
+            <param name="port">服务器端监听的端口号</param> 
+        </member>
+        <member name="P:Communication.TcpSvr.ServerSocket">
+            <summary> 
+            服务器的Socket对象 
+            </summary> 
+        </member>
+        <member name="P:Communication.TcpSvr.Resovlver">
+            <summary> 
+            数据报文分析器 
+            </summary> 
+        </member>
+        <member name="P:Communication.TcpSvr.PORT">
+            <summary>
+            獲取或設置端口號
+            </summary>
+        </member>
+        <member name="P:Communication.TcpSvr.SessionTable">
+            <summary> 
+            客户端会话数组,保存所有的客户端,不允许对该数组的内容进行修改 
+            </summary> 
+        </member>
+        <member name="P:Communication.TcpSvr.Capacity">
+            <summary> 
+            服务器可以容纳客户端的最大能力 
+            </summary> 
+        </member>
+        <member name="P:Communication.TcpSvr.SessionCount">
+            <summary> 
+            当前的客户端连接数 
+            </summary> 
+        </member>
+        <member name="P:Communication.TcpSvr.MaxClient">
+            <summary>
+             最大鏈接數
+            </summary>
+        </member>
+        <member name="P:Communication.TcpSvr.IsRun">
+            <summary> 
+            服务器运行状态 
+            </summary> 
+        </member>
+        <member name="P:Communication.TcpSvr.Coder">
+            <summary>
+            數據編碼
+            </summary>
+        </member>
+        <member name="M:Communication.TcpSvr.Start">
+            <summary> 
+            启动服务器程序,开始监听客户端请求 
+            </summary> 
+        </member>
+        <member name="M:Communication.TcpSvr.Start(System.Net.EndPoint)">
+            <summary> 
+            启动服务器程序,开始监听客户端请求 ,端口重用
+            </summary> 
+        </member>
+        <member name="M:Communication.TcpSvr.Stop">
+            <summary> 
+            停止服务器程序,所有与客户端的连接将关闭 
+            </summary> 
+        </member>
+        <member name="M:Communication.TcpSvr.CloseAllClient">
+            <summary> 
+            关闭所有的客户端会话,与所有的客户端连接会断开 
+            </summary> 
+        </member>
+        <member name="M:Communication.TcpSvr.CloseSession(Communication.Session)">
+            <summary> 
+            关闭一个与客户端之间的会话 
+            </summary> 
+            <param name="closeClient">需要关闭的客户端会话对象</param> 
+        </member>
+        <member name="M:Communication.TcpSvr.Send(Communication.Session,System.String)">
+            <summary> 
+            发送数据 
+            </summary> 
+            <param name="recvDataClient">接收数据的客户端会话</param> 
+            <param name="datagram">数据报文</param> 
+        </member>
+        <member name="M:Communication.TcpSvr.CloseClient(System.Net.Sockets.Socket,Communication.Session.ExitType)">
+            <summary> 
+            关闭一个客户端Socket,首先需要关闭Session 
+            </summary> 
+            <param name="client">目标Socket对象</param> 
+            <param name="exitType">客户端退出的类型</param> 
+        </member>
+        <member name="M:Communication.TcpSvr.AcceptConn(System.IAsyncResult)">
+            <summary> 
+            客户端连接处理函数 
+            </summary> 
+            <param name="iar">欲建立服务器连接的Socket对象</param> 
+        </member>
+        <member name="M:Communication.TcpSvr.FindSession(System.Net.Sockets.Socket)">
+            <summary> 
+            通过Socket对象查找Session对象 
+            </summary> 
+            <param name="client"></param> 
+            <returns>找到的Session对象,如果为null,说明并不存在该回话</returns> 
+        </member>
+        <member name="M:Communication.TcpSvr.ReceiveData(System.IAsyncResult)">
+            <summary> 
+            接受数据完成处理函数，异步的特性就体现在这个函数中， 
+            收到数据后，会自动解析为字符串报文 
+            </summary> 
+            <param name="iar">目标客户端Socket</param> 
+        </member>
+        <member name="M:Communication.TcpSvr.SendDataEnd(System.IAsyncResult)">
+            <summary> 
+            发送数据完成处理函数 
+            </summary> 
+            <param name="iar">目标客户端Socket</param> 
+        </member>
+    </members>
+</doc>

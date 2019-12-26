@@ -1,0 +1,526 @@
+时间 2019/12/18 21:55:00:错误源:Gecko
+[2019/12/18 21:55:00:602]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory)
+   在 Gecko.Xpcom.Initialize()
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e)
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/18 21:55:00:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory)
+   在 Gecko.Xpcom.Initialize()
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e)
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/18 21:55:55:错误源:Gecko
+[2019/12/18 21:55:55:883]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory)
+   在 Gecko.Xpcom.Initialize()
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e)
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/18 21:55:55:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory)
+   在 Gecko.Xpcom.Initialize()
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e)
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/18 21:57:06:错误源:Gecko
+[2019/12/18 21:57:06:934]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory)
+   在 Gecko.Xpcom.Initialize()
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e)
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/18 21:57:06:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory)
+   在 Gecko.Xpcom.Initialize()
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e)
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/18 22:13:52:错误源:Gecko
+[2019/12/18 22:13:52:480]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Core\Xpcom.cs:行号 345
+   在 Gecko.Xpcom.Initialize() 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Core\Xpcom.cs:行号 273
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Winforms\GeckoWebBrowser.WinForms.cs:行号 129
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Winforms\GeckoWebBrowser.WinForms.cs:行号 518
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/18 22:13:52:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Core\Xpcom.cs:行号 345
+   在 Gecko.Xpcom.Initialize() 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Core\Xpcom.cs:行号 273
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Winforms\GeckoWebBrowser.WinForms.cs:行号 129
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Winforms\GeckoWebBrowser.WinForms.cs:行号 518
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/18 22:14:12:错误源:Gecko
+[2019/12/18 22:14:12:888]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Core\Xpcom.cs:行号 345
+   在 Gecko.Xpcom.Initialize() 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Core\Xpcom.cs:行号 273
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Winforms\GeckoWebBrowser.WinForms.cs:行号 129
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Winforms\GeckoWebBrowser.WinForms.cs:行号 518
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/18 22:14:12:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Core\Xpcom.cs:行号 345
+   在 Gecko.Xpcom.Initialize() 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Core\Xpcom.cs:行号 273
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Winforms\GeckoWebBrowser.WinForms.cs:行号 129
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 D:\Source\RefResource\Gecko\Gecko\Geckofx-Winforms\GeckoWebBrowser.WinForms.cs:行号 518
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/20 20:45:24:错误源:mscorlib
+[2019/12/20 20:45:24:844]->Error Message:未找到类型“System.Windows.Forms.WebBrowser”上的构造函数。,Error Stack:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 121
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/20 20:45:24:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 121
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/20 20:45:51:错误源:mscorlib
+[2019/12/20 20:45:51:667]->Error Message:未找到类型“System.Windows.Forms.WebBrowser”上的构造函数。,Error Stack:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 121
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/20 20:45:51:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 121
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/20 23:06:27:错误源:mscorlib
+[2019/12/20 23:06:27:592]->Error Message:未找到类型“System.Windows.Forms.WebBrowser”上的构造函数。,Error Stack:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 121
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/20 23:06:27:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 121
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/20 23:07:29:错误源:mscorlib
+[2019/12/20 23:07:29:962]->Error Message:未找到类型“System.Windows.Forms.WebBrowser”上的构造函数。,Error Stack:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 121
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/20 23:07:29:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 121
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/20 23:12:04:错误源:mscorlib
+[2019/12/20 23:12:04:638]->Error Message:未找到类型“System.Windows.Forms.WebBrowser”上的构造函数。,Error Stack:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 121
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/20 23:12:04:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 121
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/20 23:53:20:错误源:mscorlib
+[2019/12/20 23:53:20:489]->Error Message:未找到类型“Gecko.GeckoWebBrowser”上的构造函数。,Error Stack:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 122
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/20 23:53:20:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 122
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/20 23:55:19:错误源:mscorlib
+[2019/12/20 23:55:20:78]->Error Message:未找到类型“Gecko.GeckoWebBrowser”上的构造函数。,Error Stack:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 122
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/20 23:55:20:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 122
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/21 10:31:50:错误源:mscorlib
+[2019/12/21 10:31:50:160]->Error Message:未找到类型“Gecko.GeckoWebBrowser”上的构造函数。,Error Stack:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 138
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/21 10:31:50:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 138
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/21 11:59:20:错误源:mscorlib
+[2019/12/21 11:59:21:82]->Error Message:未找到类型“Gecko.GeckoWebBrowser”上的构造函数。,Error Stack:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 138
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/21 11:59:21:   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 JWebBrowser.JWebBrowser.JWebBrowser_Load(Object sender, EventArgs e) 位置 D:\2019软件开发资源\抓取数据\BankReptile\JWebBrowser\JWebBrowser.cs:行号 138
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/21 12:19:48:错误源:geckofx-core
+[2019/12/21 12:19:48:865]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.Xpcom.Initialize() 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 253
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 126
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 406
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/21 12:19:48:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.Xpcom.Initialize() 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 253
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 126
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 406
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/21 12:20:44:错误源:geckofx-core
+[2019/12/21 12:20:44:778]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.Xpcom.Initialize() 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 253
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 126
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 406
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/21 12:20:44:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.Xpcom.Initialize() 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 253
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 126
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 406
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/21 12:23:04:错误源:geckofx-core
+[2019/12/21 12:23:04:948]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.Xpcom.Initialize() 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 253
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 126
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 406
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/21 12:23:04:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.Xpcom.Initialize() 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 253
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 126
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 406
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/21 12:25:46:错误源:geckofx-core
+[2019/12/21 12:25:46:935]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.Xpcom.Initialize() 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 253
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 126
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 406
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/21 12:25:46:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.Xpcom.Initialize() 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 253
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 126
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 406
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/21 12:26:29:错误源:geckofx-core
+[2019/12/21 12:26:29:282]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.Xpcom.Initialize() 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 253
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 126
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 406
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/21 12:26:29:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.Xpcom.Initialize() 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 253
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 126
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 406
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)

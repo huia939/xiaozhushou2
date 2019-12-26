@@ -1,0 +1,128 @@
+时间 2019/12/22 23:28:54:错误源:geckofx-core
+[2019/12/22 23:28:55:86]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/22 23:28:55:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/22 23:34:36:错误源:geckofx-core
+[2019/12/22 23:34:37:120]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/22 23:34:37:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/22 23:36:35:错误源:geckofx-core
+[2019/12/22 23:36:35:366]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/22 23:36:35:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/22 23:41:43:错误源:geckofx-core
+[2019/12/22 23:41:43:211]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/22 23:41:43:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/23 0:05:19:错误源:geckofx-core
+[2019/12/23 0:05:19:539]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/23 0:05:19:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/23 0:08:09:错误源:geckofx-core
+[2019/12/23 0:08:09:294]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/23 0:08:09:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/23 0:11:00:错误源:geckofx-core
+[2019/12/23 0:11:00:792]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/23 0:11:00:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+时间 2019/12/23 0:13:48:错误源:geckofx-core
+[2019/12/23 0:13:48:145]->Error Message:无法加载 DLL“xul”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。,Error Stack:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+时间 2019/12/23 0:13:48:   在 Gecko.Xpcom.NS_InitXPCOM2(nsIServiceManager& serviceManager, Object binDirectory, nsIDirectoryServiceProvider appFileLocationProvider)
+   在 Gecko.Xpcom.Initialize(String binDirectory) 位置 c:\Projects\geckofx\geckofx-core\Xpcom.cs:行号 322
+   在 Gecko.GeckoWebBrowser.OnHandleCreated(EventArgs e) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 127
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 Gecko.GeckoWebBrowser.WndProc(Message& m) 位置 c:\Projects\geckofx\geckofx-winforms\GeckoWebBrowser.WinForms.cs:行号 407
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)

@@ -1,0 +1,5 @@
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\WindowsForms001\obj\x64\Debug\FWebBrowser.csprojAssemblyReference.cache
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\WindowsForms001\obj\x64\Debug\FWebBrowser.FWebBrowser.resources
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\WindowsForms001\obj\x64\Debug\FWebBrowser.Properties.Resources.resources
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\WindowsForms001\obj\x64\Debug\FWebBrowser.csproj.GenerateResource.cache
+D:\2019软件开发资源\抓取数据\原始代码备份\BankReptile\WindowsForms001\obj\x64\Debug\FWebBrowser.csproj.CoreCompileInputs.cache
