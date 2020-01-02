@@ -37,14 +37,13 @@
             this.txtPassword = new System.Windows.Forms.ToolStripTextBox();
             this.lblShowPassWord = new System.Windows.Forms.ToolStripLabel();
             this.lblMessage = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.BtnUpadteDate = new System.Windows.Forms.Button();
             this.BtnRefresh = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -61,11 +60,10 @@
             this.toolStripLabel2,
             this.txtPassword,
             this.lblShowPassWord,
-            this.lblMessage,
-            this.toolStripButton1});
+            this.lblMessage});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -73,36 +71,36 @@
             // 
             this.txtProxy.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.txtProxy.Name = "txtProxy";
-            this.txtProxy.Size = new System.Drawing.Size(180, 31);
+            this.txtProxy.Size = new System.Drawing.Size(180, 25);
             this.txtProxy.Text = "代理IP：127.0.0.1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(44, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(44, 22);
             this.toolStripLabel1.Text = "帐号：";
             // 
             // txtAccount
             // 
             this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(100, 31);
+            this.txtAccount.Size = new System.Drawing.Size(100, 25);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(44, 28);
+            this.toolStripLabel2.Size = new System.Drawing.Size(44, 22);
             this.toolStripLabel2.Text = "密码：";
             // 
             // txtPassword
             // 
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 31);
+            this.txtPassword.Size = new System.Drawing.Size(100, 25);
             // 
             // lblShowPassWord
             // 
             this.lblShowPassWord.IsLink = true;
             this.lblShowPassWord.Name = "lblShowPassWord";
-            this.lblShowPassWord.Size = new System.Drawing.Size(56, 28);
+            this.lblShowPassWord.Size = new System.Drawing.Size(56, 22);
             this.lblShowPassWord.Text = "显示密码";
             this.lblShowPassWord.Click += new System.EventHandler(this.lblShowPassWord_Click);
             // 
@@ -111,21 +109,12 @@
             this.lblMessage.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblMessage.ForeColor = System.Drawing.Color.Red;
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(44, 28);
+            this.lblMessage.Size = new System.Drawing.Size(44, 22);
             this.lblMessage.Text = "未登录";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // BtnUpadteDate
             // 
-            this.BtnUpadteDate.Location = new System.Drawing.Point(432, 5);
+            this.BtnUpadteDate.Location = new System.Drawing.Point(528, 2);
             this.BtnUpadteDate.Name = "BtnUpadteDate";
             this.BtnUpadteDate.Size = new System.Drawing.Size(63, 23);
             this.BtnUpadteDate.TabIndex = 3;
@@ -135,11 +124,11 @@
             // 
             // BtnRefresh
             // 
-            this.BtnRefresh.Location = new System.Drawing.Point(501, 5);
+            this.BtnRefresh.Location = new System.Drawing.Point(449, 2);
             this.BtnRefresh.Name = "BtnRefresh";
             this.BtnRefresh.Size = new System.Drawing.Size(64, 23);
             this.BtnRefresh.TabIndex = 4;
-            this.BtnRefresh.Text = "手动刷新";
+            this.BtnRefresh.Text = "开始采集";
             this.BtnRefresh.UseVisualStyleBackColor = true;
             this.BtnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
@@ -152,7 +141,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(785, 383);
+            this.dataGridView1.Size = new System.Drawing.Size(631, 383);
             this.dataGridView1.TabIndex = 6;
             // 
             // tabControl1
@@ -189,22 +178,11 @@
             this.tabPage2.Text = "解析抓取结果";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(571, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FWebBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.BtnRefresh);
             this.Controls.Add(this.BtnUpadteDate);
@@ -234,14 +212,13 @@
         private System.Windows.Forms.ToolStripTextBox txtPassword;
         private System.Windows.Forms.ToolStripLabel lblShowPassWord;
         private System.Windows.Forms.ToolStripLabel lblMessage;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.Button BtnUpadteDate;
         private System.Windows.Forms.Button BtnRefresh;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

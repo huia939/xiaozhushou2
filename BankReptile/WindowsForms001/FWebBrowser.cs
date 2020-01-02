@@ -1,6 +1,7 @@
 ﻿using CefSharp;
 using CefSharp.WinForms;
 using Common;
+using Common.Log;
 using Common.Types;
 using Entity;
 using Entity.WebApiResponse;
@@ -34,36 +35,46 @@ namespace FWebBrowser
         {
             get; set;
         }
-
+        private PingRespnse.PingResult PingInfo
+        {
+            get; set;
+        }
         public FWebBrowser(TaskInfo info, string args)
         {
 
             InitializeComponent();
-            InitBrowser();
-            //this.webBrowser1 = new GeckoWebBrowser();
-            GeckoWebBrowser gecko = new GeckoWebBrowser();
-            gecko.CreateControl();
-            gecko.NoDefaultContextMenu = true; //禁用右键菜单
-            gecko.Dock = DockStyle.Fill;
-            this.Controls.Add(gecko); //添加到窗口中
 
             invoke = new ActionInvoke(this);
             TaskInfo = info;
+            TaskInfo.code_ip_proxy_ip = info.code_ip_proxy_ip != null ? info.code_ip_proxy_ip.Replace("@", ":") : "";
             TaskInfo.Channel = (Channel)info.bank_id;//根据银行bank_id 设置客户端类型
 
             txtAccount.Text = info.UserName;
             txtPassword.Text = info.PassWord;
             txtPassword.TextBox.PasswordChar = '*';
 
-
-            WfmLogin();
+            InitBrowser();
 
         }
         public ChromiumWebBrowser browser;
+        /// <summary>
+        /// 采集初始化
+        /// </summary>
         public void InitBrowser()
         {
-            Cef.Initialize(new CefSettings());
-            //browser = new ChromiumWebBrowser("http://www.baidu.com");
+            var settings = new CefSettings();
+            if (TaskInfo.code_ip_proxy_ip != "")
+            {
+                settings.CachePath = "cache";
+                string proxyIp = "http://" + TaskInfo.code_ip_proxy_ip;
+                settings.CefCommandLineArgs.Add("proxy-server", proxyIp);// "http://123.169.165.161:9999"
+
+            }
+
+            Cef.Initialize(settings);
+
+            //Cef.Initialize(new CefSettings());
+
             switch (TaskInfo.Channel)
             {
                 case Channel.支付宝:
@@ -77,17 +88,21 @@ namespace FWebBrowser
                     Thread.Sleep(5000);
                     //加载完毕后触发事件webBrowser1_DocumentCompleted
                     break;
-
+                case Channel.衣联网:
+                    browser = new ChromiumWebBrowser("https://accounts.eelly.com/login/account");
+                    Thread.Sleep(5000);
+                    //加载完毕后触发事件webBrowser1_DocumentCompleted
+                    break;
                 default:
                     throw new Exception("暂不支持该银行！");
             }
-
             Font font = new Font("微软雅黑", 10.5f);
             this.tabPage1.Controls.Add(browser);
             browser.Font = font;
             browser.Dock = DockStyle.Fill;
             browser.LoadingStateChanged += new EventHandler<LoadingStateChangedEventArgs>(LoadingStateChangeds);
 
+            Start();
         }
         //加载状态
         private void LoadingStateChangeds(object sender, EventArgs e)
@@ -95,32 +110,55 @@ namespace FWebBrowser
 
 
         }
+
         /// <summary>
-        /// 登录操作
+        /// 设置平台账号密码
         /// </summary>
-        private void WfmLogin()
+        private void SetPingtUserNamePwd()
         {
-            //switch (TaskInfo.Channel)
-            //{
-            //    case Channel.支付宝:
-            //        webBrowser1.Navigate("https://auth.alipay.com/login/index.htm");
-            //        Thread.Sleep(5000);
-            //        //加载完毕后触发事件webBrowser1_DocumentCompleted
-            //        webBrowser1.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(webBrowser1_DocumentCompleted);
-            //        break;
+            switch (TaskInfo.Channel)
+            {
+                case Channel.支付宝:
+                    //设置账户和密码
+                    browser.GetBrowser().MainFrame.ExecuteJavaScriptAsync("document.getElementById('J-input-user').value='" + TaskInfo.UserName + "'");
+                    browser.GetBrowser().MainFrame.ExecuteJavaScriptAsync("document.getElementById('password_rsainput').value='" + TaskInfo.PassWord + "'");
+                    Thread.Sleep(15000);
+                    browser.GetBrowser().MainFrame.ExecuteJavaScriptAsync("document.getElementById('J-login-btn').click();");
 
-            //    case Channel.苏宁云平台:
-            //        webBrowser1.Navigate("https://mpassport.suning.com/ids/login");
-            //        Thread.Sleep(5000);
-            //        //加载完毕后触发事件webBrowser1_DocumentCompleted
-            //        webBrowser1.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(webBrowser1_DocumentCompleted);
-            //        break;
 
-            //    default:
-            //        throw new Exception("暂不支持该银行！");
-            //}
+                    break;
+                case Channel.苏宁云平台:
+                    browser.GetBrowser().MainFrame.ExecuteJavaScriptAsync("document.getElementById('userName').value='" + TaskInfo.UserName + "'");
+                    browser.GetBrowser().MainFrame.ExecuteJavaScriptAsync("document.getElementById('password').value='" + TaskInfo.PassWord + "'");
+                    Thread.Sleep(15000);
+                    browser.GetBrowser().MainFrame.ExecuteJavaScriptAsync("document.getElementById('loginButton').click();");
 
+
+                    break;
+                case Channel.衣联网:
+                    browser.GetBrowser().MainFrame.ExecuteJavaScriptAsync("document.getElementsByName('username')[0].value='" + TaskInfo.UserName + "'");
+
+                    browser.GetBrowser().MainFrame.ExecuteJavaScriptAsync("document.getElementsByName('password')[0].value='" + TaskInfo.PassWord + "'");
+                    Thread.Sleep(5000);
+
+                    new Thread(() => YlLoingclick()).Start();
+
+                    break;
+                default:
+                    throw new Exception("暂不支持该银行！");
+            }
         }
+
+        /// <summary>
+        /// 衣联网点击按钮进行登录
+        /// </summary>
+        private void YlLoingclick()
+        {
+            Thread.Sleep(5000);
+            browser.GetBrowser().MainFrame.ExecuteJavaScriptAsync("document.getElementsByClassName('submit-btn')[0].click();");
+        }
+
+
 
         /// <summary>
         /// 页面登录成功
@@ -130,10 +168,20 @@ namespace FWebBrowser
         /// <param name="e"></param>
         private void BtnUpadteDate_Click(object sender, EventArgs e)
         {
-            UpdateJsonData();
+            try
+            {
+                new Thread(() => UpdateJsonData()).Start();
+            }
+            catch (Exception)
+            {
+
+            }
+
         }
+
         private void Start()
         {
+            int iTest = 0;
             new Thread(() =>
             {
                 Thread.Sleep(3000);
@@ -141,7 +189,17 @@ namespace FWebBrowser
                 {
                     try
                     {
-                        new Thread(() => WfmRefresh()).Start();
+                        if (iTest == 0)
+                        {
+                            new Thread(() => SetPingtUserNamePwd()).Start();//第一次执行心跳包的时候，进行 账号设置
+                        }
+                        else
+                        {
+                            if (IsLogin)
+                            {
+                                new Thread(() => WfmRefresh()).Start();
+                            }
+                        }
                     }
                     catch
                     {
@@ -149,22 +207,20 @@ namespace FWebBrowser
                     }
                     //35秒刷新下页面。保持通讯状态
                     Thread.Sleep(35000);
+                    iTest++;
                 }
             }).Start();
 
-            //心跳包通讯
+            int iTest2 = 0;
             new Thread(() =>
             {
                 while (true)
                 {
+
                     try
                     {
-                        string resul2t = CallApi.PostAPI($"{ConfigurationManager.AppSettings["webInterfaceApi"]}/api/device/ping", $"code_id={TaskInfo.code_id}&token={TaskInfo.token}");
-                        var models = JsonHelper.ToObject<PingRespnse>(resul2t);
 
-                        //判断是否登录
-                        new Thread(() => WebBrowserToStandard()).Start();
-
+                       
                         //判断用户是否登录成功
                         if (IsLogin)
                         {
@@ -174,20 +230,41 @@ namespace FWebBrowser
                                 lblMessage.ForeColor = Color.Green;
                             });
 
-                            SetMessage(MessageType.状态, "登录成功");
+                            SetMessage(MessageType.状态, "链接成功");
                             //上报心跳包并获取PageIndex   未实现
                             //获取到的PageIndex保存进入Pages
-
                             ///api/device/ping
                             //心跳包请求ID
-                            string result = CallApi.PostAPI($"{ConfigurationManager.AppSettings["webInterfaceApi"]}/api/device/ping", $"code_id={TaskInfo.code_id}&token={TaskInfo.token}");
+                            string result = CallApi.PostAPI($"{ConfigurationManager.AppSettings["webInterfaceApi"]}/api/device/ping", $"code_id={TaskInfo.code_id}&bank_id={TaskInfo.bank_id}&token={TaskInfo.token}");
                             var model = JsonHelper.ToObject<PingRespnse>(result);
                             if (model.status == 1)
                             {
-                                if (model.result.need_data == 1)
+                                //每次心跳更新下最新的上传状态
+                                PingInfo = model.result;
+                               
+
+                                switch (TaskInfo.Channel)
                                 {
-                                    //等于1 则进行数据 抓取上传操作
-                                    //new Thread(() => UpdateJsonData()).Start();
+                                    case Channel.支付宝:
+                                        if (model.result.need_data == 1)
+                                        {   
+                                            //等于1 则进行数据 抓取上传操作
+                                            new Thread(() => UpdateJsonData()).Start();
+                                        }
+                                        break;
+                                    case Channel.苏宁云平台:
+                                        if (PingInfo.wait_order_page >= 1 || PingInfo.finish_order_page >= 1)
+                                        {  
+                                            //判断是否登录
+                                            new Thread(() => WebBrowserToStandard(iTest)).Start();
+                                            Thread.Sleep(3000);
+
+                                            //有需要抓取的未付款或代发货才进行 抓取上传操作
+                                            new Thread(() => UpdateJsonData()).Start();
+                                        }
+                                        break;
+
+
                                 }
                             }
                         }
@@ -207,6 +284,7 @@ namespace FWebBrowser
 
                     }
                     Thread.Sleep(15000);//15秒保持心跳通讯
+                    iTest2++;
                 }
             }).Start();
 
@@ -218,34 +296,103 @@ namespace FWebBrowser
         /// </summary>
         private void UpdateJsonData()
         {
-            switch (TaskInfo.Channel)
+            try
             {
-                case Channel.支付宝:
-                    //HtmlElement doc = webBrowser1.Document.GetElementById("container");
 
-                    var task1 = browser.GetSourceAsync();
-                    task1.Wait();
-                    string html = task1.Result;
+                switch (TaskInfo.Channel)
+                {
+                    case Channel.支付宝:
+                        //HtmlElement doc = webBrowser1.Document.GetElementById("container");
+                        var task1 = browser.GetSourceAsync();
+                        task1.Wait();
+                        string html = task1.Result;
 
-                    string docmaHtml = html;
+                        string docmaHtml = html;
+                        if (PingInfo.need_data == 1)
+                        {
+                            GetDealPostDate(docmaHtml);
+                        }
+                        break;
+                    case Channel.苏宁云平台:
+                        int pageSize = 1;
+                        if (PingInfo.wait_order_page >= 1)
+                        {
+                            pageSize = PingInfo.wait_order_page;
+                        }
+                        if (PingInfo.finish_order_page >= 1)
+                        {
+                            pageSize = PingInfo.finish_order_page;
+                        }
+                        new Thread(() => SetSnPingtGetPageList(pageSize)).Start();
+                        Thread.Sleep(2000);
 
-                    GetDealPostDate(docmaHtml);
-                    break;
-                case Channel.苏宁云平台:
+                        //抓取内容进行上传
+                        var task2 = browser.GetSourceAsync();
+                        task2.Wait();
+                        string html2 = task2.Result;
+                        string docmaHtml2 = html2;
 
-                    break;
-                default:
-                    throw new Exception("暂不支持该银行！");
+                        HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+                        doc.LoadHtml(docmaHtml2);
+                        HtmlNodeCollection Table = doc.DocumentNode.SelectNodes("//*[@id='tabdiv']");
+                        if (Table.Count > 0) //判断是否存在
+                        {
+                            HtmlNodeCollection Th = null;
+                            string HtmlType = Table[0].SelectNodes("div")[0].SelectNodes("span")[0].InnerText;
+                            switch (HtmlType)
+                            {
+                                case "未付款：":
+                                    if (PingInfo.wait_order_page >= 1)
+                                    {
+                                        GetDealPostDate(docmaHtml2);
+                                    }
+                                    break;
+                                case "未发货：":
+                                    if (PingInfo.finish_order_page >= 1)
+                                    {
+                                        GetDealPostDate(docmaHtml2);
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+
+
+                        break;
+                    default:
+                        throw new Exception("暂不支持该银行！");
+                }
+            }
+            catch (Exception ex)
+            {
+                MTLogger log = new MTLogger("FWebBrowser程序严重错误.log");
+                log.WriteLineWithTime("严重错误:" + ex.Message + ex.Source + ex.StackTrace);
             }
 
-
         }
+        /// <summary>
+        /// 苏宁平台 分页操作
+        /// 抓取前 ，先分页搞一下字
+        /// </summary>
+        /// <param name="PageSize"></param>
+        private void SetSnPingtGetPageList(int PageSize)
+        {
+            if (PingInfo.wait_order_page >= 1)
+            {
+                browser.ExecuteScriptAsync("jumpPage('hassoldgoodstab2-pageForm2'," + PageSize + ", '/moms/delivery/toNoPayOrders.action');");//设置页码
 
+            }
+            if (PingInfo.finish_order_page >= 1)
+            {
+                browser.ExecuteScriptAsync("jumpPage('hassoldgoodstab3-pageForm2'," + PageSize + ", '/moms/delivery/toWaittodelivery.action');");//设置页码
+            }
+        }
 
         /// <summary>
         /// 跳转到查询交易明细页面
         /// </summary>
-        private void WebBrowserToStandard()
+        private void WebBrowserToStandard(int iText)
         {
             try
             {
@@ -253,30 +400,26 @@ namespace FWebBrowser
                 {
                     case Channel.支付宝:
                         //获取页面内容。然后解析
-                        var txtIsLoginConent = "";// webBrowser1.Document.GetElementById("container");
-                        if (txtIsLoginConent == "")
-                        {
-                            IsLogin = false;
-                        }
-                        else
-                        {
-                            IsLogin = true;
-                            try
-                            {
-                                var txtIsLoginTable = "";// webBrowser1.Document.GetElementById("tradeRecordsIndex");
 
-                            }
-                            catch (Exception)
-                            {
-                                // webBrowser1.Navigate("https://consumeprod.alipay.com/record/standard.htm");
-                                browser = new ChromiumWebBrowser("https://consumeprod.alipay.com/record/standard.htm");
-                                Thread.Sleep(5000);
-                            }
-
-                        }
                         break;
                     case Channel.苏宁云平台:
 
+                        if (PingInfo.wait_order_page >= 1)
+                        {  //待付款
+                            browser.Load("https://moms.suning.com/moms/delivery/toHaveSoldBabyMain.action?tabtype=2");
+                            //browser.ExecuteScriptAsync("jumpPage('hassoldgoodstab2-pageForm2',2, '/moms/delivery/toNoPayOrders.action');");//设置页码
+                        }
+                        //else
+                        //{
+                        //    browser.Load("https://moms.suning.com/moms/delivery/toHaveSoldBabyMain.action?tabtype=2");
+                        //}
+
+                        if (PingInfo.finish_order_page >= 1)
+                        {
+                            //未发货
+                            browser.Load("https://moms.suning.com/moms/delivery/toHaveSoldBabyMain.action?tabtype=3");
+                            //browser.ExecuteScriptAsync("jumpPage('hassoldgoodstab2-pageForm2',"+ PingInfo.page + ", '/moms/delivery/toNoPayOrders.action');");//设置页码
+                        }
                         break;
                     default:
                         throw new Exception("暂不支持该银行！");
@@ -286,6 +429,7 @@ namespace FWebBrowser
             }
             catch (Exception ex)
             {
+                //MessageBox.Show(ex.Message);
                 IsLogin = false;
             }
         }
@@ -297,52 +441,17 @@ namespace FWebBrowser
         /// <param name="e"></param>
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            switch (TaskInfo.Channel)
-            {
-                case Channel.支付宝:
-                    //设置账户和密码
-                    //HtmlElement txtUserName = webBrowser1.Document.GetElementById("J-input-user");
-                    //HtmlElement txtPassWord = webBrowser1.Document.GetElementById("password_rsainput");
-
-                    //if (txtUserName == null || txtPassWord == null)
-                    //    return;
-                    //txtUserName.SetAttribute("value", TaskInfo.UserName);
-                    //txtPassWord.SetAttribute("value", TaskInfo.PassWord);
-
-                    //////获取按钮登录
-                    //HtmlElement txtBtnLogin = webBrowser1.Document.GetElementById("J-login-btn");
-                    //txtBtnLogin.InvokeMember("click");
-
-                    browser.GetBrowser().MainFrame.ExecuteJavaScriptAsync("document.getElementById('J-input-user').value='" + TaskInfo.UserName + "'");
-                    browser.GetBrowser().MainFrame.ExecuteJavaScriptAsync("document.getElementById('password_rsainput').value='" + TaskInfo.PassWord + "'");
-                    Thread.Sleep(15000);
-                    browser.GetBrowser().MainFrame.ExecuteJavaScriptAsync("document.getElementById('J-login-btn').click();");
-
-                    Start();
-                    break;
-                case Channel.苏宁云平台:
-                    browser.GetBrowser().MainFrame.ExecuteJavaScriptAsync("document.getElementById('userName').value='" + TaskInfo.UserName + "'");
-                    browser.GetBrowser().MainFrame.ExecuteJavaScriptAsync("document.getElementById('password').value='" + TaskInfo.PassWord + "'");
-                    Thread.Sleep(15000);
-                    browser.GetBrowser().MainFrame.ExecuteJavaScriptAsync("document.getElementById('loginButton').click();");
-
-                    //Start();
-                    break;
-                default:
-                    throw new Exception("暂不支持该银行！");
-            }
 
 
         }
 
         /// <summary>
-        /// 手动刷新页面
+        /// 开始采集
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void BtnRefresh_Click(object sender, EventArgs e)
         {
-
             //WfmRefresh();
             switch (TaskInfo.Channel)
             {
@@ -353,7 +462,9 @@ namespace FWebBrowser
                     IsLogin = true;
                     break;
                 case Channel.苏宁云平台:
-                    browser.Load("https://moms.suning.com/moms/delivery/toHaveSoldBabyMain.action?tabtype=3");
+                    browser.Load("https://moms.suning.com/moms/delivery/toHaveSoldBabyMain.action?tabtype=2");
+                    Thread.Sleep(5000);
+                    IsLogin = true;
                     break;
                 default:
                     throw new Exception("暂不支持该银行！");
@@ -384,8 +495,12 @@ namespace FWebBrowser
             if (messageType != MessageType.状态)
             {
                 message = $"账户{TaskInfo.UserName}提醒您：{message}";
-                MessageBox.Show(message);
+
+                MTLogger log = new MTLogger(DateTime.Now.ToString("yyyy-MM-dd") + "操控日志记录.log");
+                log.WriteLineWithTime("|消息：" + message + "|时间：" + DateTime.Now.ToString() + "\r\n");
+
             }
+
         }
 
 
@@ -408,7 +523,7 @@ namespace FWebBrowser
             Process.GetCurrentProcess().Kill();
         }
 
-        #region MyRegion
+        #region 转化内容进行上传操作
 
         /// <summary>
         /// 页面内容转化DataTable进行上传操作
@@ -421,8 +536,10 @@ namespace FWebBrowser
                 case Channel.支付宝:
                     DataTable dtstr = GetQueryDataTable(str, "");
                     if (dtstr != null)
-                    {  //有数据则进行数据上传操作
+                    {
+                        //有数据则进行数据上传操作
                         this.dataGridView1.DataSource = dtstr;
+
                         //上传操作
                         string strDataJson = Newtonsoft.Json.JsonConvert.SerializeObject(dtstr, Newtonsoft.Json.Formatting.None, new Newtonsoft.Json.Converters.DataTableConverter());
                         string strData = "{\"data\":" + strDataJson + "}";
@@ -431,24 +548,35 @@ namespace FWebBrowser
                         var model = JsonHelper.ToObject<DefaultReponse>(result);
                         if (model.status == 1)
                         {
-                            SetMessage(MessageType.默认, TaskInfo.UserName + "交易记录上传成功");
+                            SetMessage(MessageType.默认, "支付宝：" + TaskInfo.UserName + "交易记录上传成功" + strDataJson);
                         }
                     }
                     break;
                 case Channel.苏宁云平台:
                     DataTable dtSnData = GetSnYunataTable(str, "");
                     if (dtSnData != null)
-                    {  //有数据则进行数据上传操作
+                    {
+                        //有数据则进行数据上传操作
                         this.dataGridView1.DataSource = dtSnData;
                         //上传操作
                         string strsnDataJson = Newtonsoft.Json.JsonConvert.SerializeObject(dtSnData, Newtonsoft.Json.Formatting.None, new Newtonsoft.Json.Converters.DataTableConverter());
                         string strsnData = "{\"data\":" + strsnDataJson + "}";
 
-                        string result = CallApi.PostAPI($"{ConfigurationManager.AppSettings["webInterfaceApi"]}/api/device/postData", $"code_id={TaskInfo.code_id}&bank_id={TaskInfo.bank_id}&page=1&token={TaskInfo.token}&data={strsnData}");
+                        int pageSize = 1;
+                        if (PingInfo.wait_order_page >= 1)
+                        {
+                            pageSize = PingInfo.wait_order_page;
+                        }
+                        if (PingInfo.finish_order_page >= 1)
+                        {
+                            pageSize = PingInfo.finish_order_page;
+                        }
+
+                        string result = CallApi.PostAPI($"{ConfigurationManager.AppSettings["webInterfaceApi"]}/api/device/postData", $"code_id={TaskInfo.code_id}&bank_id={TaskInfo.bank_id}&page={pageSize}&token={TaskInfo.token}&data={strsnData}");
                         var model = JsonHelper.ToObject<DefaultReponse>(result);
                         if (model.status == 1)
                         {
-                            SetMessage(MessageType.默认, TaskInfo.UserName + "交易记录上传成功");
+                            SetMessage(MessageType.默认, "苏宁云平台：" + TaskInfo.UserName + "交易记录上传成功" + strsnDataJson);
                         }
                     }
 
@@ -459,6 +587,7 @@ namespace FWebBrowser
 
 
         }
+
         /// <summary>
         /// 支付宝:html解析转化为DataTable
         /// </summary>
@@ -490,6 +619,7 @@ namespace FWebBrowser
                         //        dt.Columns.Add(Th[i].InnerText, System.Type.GetType("System.String")); //动态加列
                         //    }
                         //}
+
                         dt.Columns.Add("order_no", System.Type.GetType("System.String"));
                         dt.Columns.Add("trading_time", System.Type.GetType("System.String"));
                         dt.Columns.Add("order_money", System.Type.GetType("System.String"));
@@ -513,17 +643,31 @@ namespace FWebBrowser
                                 {
                                     //自动匹配抓取
                                     //if (!string.IsNullOrEmpty(Th[i].InnerText))
-                                    //    dr[Th[i].InnerText] = tds[i].InnerText;
+                                    //dr[Th[i].InnerText] = tds[i].InnerText;
 
                                     switch (i)
                                     {
                                         case 0:
-                                            dr["trading_time"] = GetTimeStamp();
+
                                             dr["lei_6"] = 1;
                                             dr["reciprocal_account"] = "";
                                             break;
                                         case 1:
-
+                                            string strStateDate = "";
+                                            switch (tds[i].SelectNodes("p")[0].InnerText.Trim())
+                                            {
+                                                case "今天":
+                                                    strStateDate = DateTime.Now.ToString("yyyy-MM-dd");
+                                                    break;
+                                                case "昨天":
+                                                    strStateDate = DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd");
+                                                    break;
+                                                default:
+                                                    strStateDate = tds[i].SelectNodes("p")[0].InnerText.Trim();
+                                                    break;
+                                            }
+                                            string strDate = strStateDate + " " + tds[i].SelectNodes("p")[1].InnerText.Trim();
+                                            dr["trading_time"] = TimestampHelper.GetUtcTimeStamp(Convert.ToDateTime(strDate));// GetTimeStamp();Convert.ToDateTime(strDate)
                                             break;
                                         case 2:
                                             dr["reciprocal_name"] = tds[i].SelectNodes("p")[0].InnerText.Trim() + "|" + tds[i].SelectNodes("p")[1].InnerText.Trim();
@@ -687,10 +831,6 @@ namespace FWebBrowser
             txtProxy.Text = "代理IP：" + TaskInfo.code_ip_proxy_ip;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string str = File.ReadAllText(@"D:\2019软件开发资源\抓取数据\BankReptile\WindowsForms001\snweifah.txt");
-            GetDealPostDate(str);
-        }
+
     }
 }

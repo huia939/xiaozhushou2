@@ -33,30 +33,42 @@ namespace FWebBrowser
                 //测试阿里
                 TaskInfo task = new TaskInfo
                 {
+
+                    //UserName = "NKBxUk6117",
+                    //PassWord = "tHH546594256",
+                    //bank_id = 101,
+                    //code_id = 1,
+                    //token = "a9b49f34b253ce0cb668e80143079306",
+                    //bank_name = "衣联网下单",
+                    //code_name = "衣联网测试",
+                    //Channel = (Channel)101,
+                    //code_ip_proxy_ip = null,// "122.114.112.242:16818",
+
                     UserName = "lecai25689",
                     PassWord = "a22558899",
                     bank_id = 100001,
-                    code_id = 3334,
-                    token = "bf9e9122261b1167bec9d50e3f5660b4",
+                    code_id = 1,
+                    token = "a9b49f34b253ce0cb668e80143079306",
                     bank_name = "苏宁云平台",
                     code_name = "WInfrom测试",
                     Channel = (Channel)100001,
-                    code_ip_proxy_ip = "192.168.100.100",
+                    code_ip_proxy_ip = null,// "122.114.112.242:16818",
 
                     //UserName = "lecai25689",
                     //PassWord = "a22558899",
                     //bank_id = 29,
-                    //code_id = 3334,
-                    //token = "bf9e9122261b1167bec9d50e3f5660b4",
+                    //code_id = 1,
+                    //token = "a9b49f34b253ce0cb668e80143079306",
                     //bank_name = "支付宝",
                     //code_name = "WInfrom测试",
                     //Channel = (Channel)29,
                     //code_ip_proxy_ip = "192.168.100.100",
+
                 };
 
                 args = new string[] { JsonHelper.ToJson(task) };
             }
-          
+
 
 
             if (args.Length != 1)
