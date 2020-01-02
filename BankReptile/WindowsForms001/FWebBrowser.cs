@@ -220,7 +220,7 @@ namespace FWebBrowser
                     try
                     {
 
-                       
+
                         //判断用户是否登录成功
                         if (IsLogin)
                         {
@@ -241,20 +241,24 @@ namespace FWebBrowser
                             {
                                 //每次心跳更新下最新的上传状态
                                 PingInfo = model.result;
-                               
+
 
                                 switch (TaskInfo.Channel)
                                 {
                                     case Channel.支付宝:
                                         if (model.result.need_data == 1)
-                                        {   
+                                        {
                                             //等于1 则进行数据 抓取上传操作
                                             new Thread(() => UpdateJsonData()).Start();
                                         }
                                         break;
                                     case Channel.苏宁云平台:
-                                        if (PingInfo.wait_order_page >= 1 || PingInfo.finish_order_page >= 1)
-                                        {  
+                                        if (PingInfo.wait_order_page >= 1 && PingInfo.finish_order_page >= 1)
+                                        {
+                                            //两个都大于1的情况不进行上传操作
+                                        }
+                                        else if (PingInfo.wait_order_page >= 1 || PingInfo.finish_order_page >= 1)
+                                        {
                                             //判断是否登录
                                             new Thread(() => WebBrowserToStandard(iTest)).Start();
                                             Thread.Sleep(3000);
@@ -262,6 +266,7 @@ namespace FWebBrowser
                                             //有需要抓取的未付款或代发货才进行 抓取上传操作
                                             new Thread(() => UpdateJsonData()).Start();
                                         }
+
                                         break;
 
 
@@ -283,7 +288,7 @@ namespace FWebBrowser
                     {
 
                     }
-                    Thread.Sleep(15000);//15秒保持心跳通讯
+                    Thread.Sleep(12000);//15秒保持心跳通讯 心跳改成12秒
                     iTest2++;
                 }
             }).Start();
